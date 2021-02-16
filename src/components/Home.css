@@ -1,0 +1,59 @@
+.jumbotron_white{
+    background-color: white;
+    display: block;
+    height: 600px;
+    background-image: url(/mbranch.png);
+    background-repeat: no-repeat;
+    background-position: -10%;
+    background-size: contain;
+}
+
+.red{
+    background-color: red;   
+}
+
+.v-application .flex-wrap {
+    flex-wrap: wrap!important;
+}
+
+.width-100 {
+    width: 100%;
+}
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+.flex-justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-grey-1 {
+    color: rgba(23,21,20,.4)!important;
+}
+
+.text-20-regular {
+    font-size: 20px!important;
+    font-weight: 400!important;
+}
+.margint-4 {
+    margin-top: 16px;
+}
+
+.home-card {
+    position: relative;
+    box-shadow: 0 44px 52px -24px rgba(62,25,18,.24), 0 2px 24px -10px rgba(62,25,18,.12);
+    border-radius: 36px;
+    background-color: #fff;
+    padding: 52px 32px;
+    top: 140px;
+    max-width: 740px;
+    margin: auto;
+}
+.min-width{
+    min-width:380px
+}

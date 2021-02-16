@@ -1,0 +1,25 @@
+
+
+.flex-box{
+    display: flex;
+    flex-direction: column;
+  /* height: 300px; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.headerGrid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+}
+
+.headerButtons{
+    justify-self:end
+}
+
+
+/* .nav-item .nav-link{
+    font-size: 24px !important;
+    font-weight: 500 !important;
+} */

@@ -1,0 +1,768 @@
+{
+  "contractName": "IGeneScience",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isAlpacaGeneScience",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "genes1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "genes2",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "generation",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "targetBlock",
+          "type": "uint256"
+        }
+      ],
+      "name": "mixGenes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "gene",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "energy",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "generationFactor",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"isAlpacaGeneScience\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"genes1\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"genes2\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"generation\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"targetBlock\",\"type\":\"uint256\"}],\"name\":\"mixGenes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"gene\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"energy\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"generationFactor\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"mixGenes(uint256,uint256,uint256,uint256)\":{\"details\":\"given genes of alpaca 1 & 2, return a genetic combination\",\"params\":{\"generation\":\"child generation\",\"genes1\":\"genes of matron\",\"genes2\":\"genes of sire\",\"targetBlock\":\"target block child is intended to be born\"},\"returns\":{\"energy\":\"energy associated with the gene\",\"gene\":\"child gene\",\"generationFactor\":\"buffs child energy, higher the generation larger the generationFactor   energy = gene energy * generationFactor\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/my files/BlockChain Projects/Zenof/src/contracts/interfaces/IGeneScience.sol\":\"IGeneScience\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/my files/BlockChain Projects/Zenof/src/contracts/interfaces/IGeneScience.sol\":{\"keccak256\":\"0x66137374d36c389515af8dc9a2b09dcf75597ad56872768be2cd9350ac3e6c97\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd1ad27c0e264f32021d9a853fea76602e36a2daab80d8c20f97227238b1e7f3\",\"dweb:/ipfs/QmbL8HZDxcRM497XpDrxKKBYpSsWzYxDjA4dBwmZrwUfm4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity =0.6.12;\r\n\r\ninterface IGeneScience {\r\n    function isAlpacaGeneScience() external pure returns (bool);\r\n\r\n    /**\r\n     * @dev given genes of alpaca 1 & 2, return a genetic combination\r\n     * @param genes1 genes of matron\r\n     * @param genes2 genes of sire\r\n     * @param generation child generation\r\n     * @param targetBlock target block child is intended to be born\r\n     * @return gene child gene\r\n     * @return energy energy associated with the gene\r\n     * @return generationFactor buffs child energy, higher the generation larger the generationFactor\r\n     *   energy = gene energy * generationFactor\r\n     */\r\n    function mixGenes(\r\n        uint256 genes1,\r\n        uint256 genes2,\r\n        uint256 generation,\r\n        uint256 targetBlock\r\n    )\r\n        external\r\n        view\r\n        returns (\r\n            uint256 gene,\r\n            uint256 energy,\r\n            uint256 generationFactor\r\n        );\r\n}\r\n",
+  "sourcePath": "C:\\my files\\BlockChain Projects\\Zenof\\src\\contracts\\interfaces\\IGeneScience.sol",
+  "ast": {
+    "absolutePath": "/C/my files/BlockChain Projects/Zenof/src/contracts/interfaces/IGeneScience.sol",
+    "exportedSymbols": {
+      "IGeneScience": [
+        5206
+      ]
+    },
+    "id": 5207,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5182,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:15"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 5206,
+        "linearizedBaseContracts": [
+          5206
+        ],
+        "name": "IGeneScience",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "c2f5ddc5",
+            "id": 5187,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAlpacaGeneScience",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5183,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:2:15"
+            },
+            "returnParameters": {
+              "id": 5186,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5185,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5187,
+                  "src": "147:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5184,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "147:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "146:6:15"
+            },
+            "scope": 5206,
+            "src": "93:60:15",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 5188,
+              "nodeType": "StructuredDocumentation",
+              "src": "161:509:15",
+              "text": " @dev given genes of alpaca 1 & 2, return a genetic combination\n @param genes1 genes of matron\n @param genes2 genes of sire\n @param generation child generation\n @param targetBlock target block child is intended to be born\n @return gene child gene\n @return energy energy associated with the gene\n @return generationFactor buffs child energy, higher the generation larger the generationFactor\n   energy = gene energy * generationFactor"
+            },
+            "functionSelector": "44b3b11b",
+            "id": 5205,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mixGenes",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5197,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5190,
+                  "mutability": "mutable",
+                  "name": "genes1",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "704:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5189,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "704:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5192,
+                  "mutability": "mutable",
+                  "name": "genes2",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "729:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5191,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5194,
+                  "mutability": "mutable",
+                  "name": "generation",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "754:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "754:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5196,
+                  "mutability": "mutable",
+                  "name": "targetBlock",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "783:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5195,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "783:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "693:116:15"
+            },
+            "returnParameters": {
+              "id": 5204,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5199,
+                  "mutability": "mutable",
+                  "name": "gene",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "874:12:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5198,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "874:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5201,
+                  "mutability": "mutable",
+                  "name": "energy",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "901:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5200,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "901:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5203,
+                  "mutability": "mutable",
+                  "name": "generationFactor",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "930:24:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5202,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "930:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "859:106:15"
+            },
+            "scope": 5206,
+            "src": "676:290:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5207,
+        "src": "63:906:15"
+      }
+    ],
+    "src": "35:936:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/my files/BlockChain Projects/Zenof/src/contracts/interfaces/IGeneScience.sol",
+    "exportedSymbols": {
+      "IGeneScience": [
+        5206
+      ]
+    },
+    "id": 5207,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 5182,
+        "literals": [
+          "solidity",
+          "=",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:24:15"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 5206,
+        "linearizedBaseContracts": [
+          5206
+        ],
+        "name": "IGeneScience",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "c2f5ddc5",
+            "id": 5187,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAlpacaGeneScience",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5183,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:2:15"
+            },
+            "returnParameters": {
+              "id": 5186,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5185,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5187,
+                  "src": "147:4:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5184,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "147:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "146:6:15"
+            },
+            "scope": 5206,
+            "src": "93:60:15",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 5188,
+              "nodeType": "StructuredDocumentation",
+              "src": "161:509:15",
+              "text": " @dev given genes of alpaca 1 & 2, return a genetic combination\n @param genes1 genes of matron\n @param genes2 genes of sire\n @param generation child generation\n @param targetBlock target block child is intended to be born\n @return gene child gene\n @return energy energy associated with the gene\n @return generationFactor buffs child energy, higher the generation larger the generationFactor\n   energy = gene energy * generationFactor"
+            },
+            "functionSelector": "44b3b11b",
+            "id": 5205,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mixGenes",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 5197,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5190,
+                  "mutability": "mutable",
+                  "name": "genes1",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "704:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5189,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "704:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5192,
+                  "mutability": "mutable",
+                  "name": "genes2",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "729:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5191,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "729:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5194,
+                  "mutability": "mutable",
+                  "name": "generation",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "754:18:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "754:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5196,
+                  "mutability": "mutable",
+                  "name": "targetBlock",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "783:19:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5195,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "783:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "693:116:15"
+            },
+            "returnParameters": {
+              "id": 5204,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5199,
+                  "mutability": "mutable",
+                  "name": "gene",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "874:12:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5198,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "874:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5201,
+                  "mutability": "mutable",
+                  "name": "energy",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "901:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5200,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "901:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5203,
+                  "mutability": "mutable",
+                  "name": "generationFactor",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 5205,
+                  "src": "930:24:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5202,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "930:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "859:106:15"
+            },
+            "scope": 5206,
+            "src": "676:290:15",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 5207,
+        "src": "63:906:15"
+      }
+    ],
+    "src": "35:936:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2021-01-12T20:51:59.178Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "mixGenes(uint256,uint256,uint256,uint256)": {
+        "details": "given genes of alpaca 1 & 2, return a genetic combination",
+        "params": {
+          "generation": "child generation",
+          "genes1": "genes of matron",
+          "genes2": "genes of sire",
+          "targetBlock": "target block child is intended to be born"
+        },
+        "returns": {
+          "energy": "energy associated with the gene",
+          "gene": "child gene",
+          "generationFactor": "buffs child energy, higher the generation larger the generationFactor   energy = gene energy * generationFactor"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
