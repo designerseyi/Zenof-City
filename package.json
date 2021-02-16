@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start2": "react-scripts start",
-    "start":"node server/server.js"
+    "start":"node server/server.js",
     "eject": "react-scripts eject",
     "build": "waffle",
     "build2": "react-scripts build",
